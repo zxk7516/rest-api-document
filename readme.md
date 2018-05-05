@@ -1,3 +1,5 @@
+
+
 ###权限和登录
 
 1. 登录
@@ -36,7 +38,7 @@
    {"error": "Unauthorized."}
    ```
 
-2.  在请求头部加入令牌
+2. 在请求头部加入令牌
 
    ```javascript
    // 单个请求
@@ -73,7 +75,7 @@
    
    ```
 
-3.  令牌缺失或失效请求示例
+3. 令牌缺失或失效请求示例  
 
    > status 401
 
@@ -91,9 +93,43 @@
    {"error": "对不起，您没有访问权限"}
    ```
 
-   
 
-   
+### 填充和修改
+
+ 1. 表单验证
+
+    请求示例
+
+    ```json
+    {
+      "title": "春天出游",
+      "start_at": "2018-06-06",
+      "end_at": "2018-06-06",
+      "published_at": "2018-05-28 12:00:00",
+      "author_name": "",
+      "image": "/img/picture/1.png",
+      "description": "超长字符串.........."
+    }
+    ```
+
+    返回结果
+
+    > status: 422 (Unprocessable Entity)
+
+    ```json
+    {
+        "author_name": [
+            "author name 项必填."
+        ],
+        "description": [
+            "description 最多包含 255 个字符."
+        ]
+    }
+    ```
+
+    author_name 出错的字段  [" ......"] , 错误提示
+
+    
 
 
 ### 数据获取
@@ -132,6 +168,4 @@
 | per_page      | 每页条数                                     |
 
 
-
-### 填充和修改
 
