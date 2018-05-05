@@ -1,24 +1,26 @@
+<center><h3>rest api documentation<h3></center>
+
 ### API Request 
 
 1. URL pattern
 
-   | name    | method | url                | description            |
-   | ------- | ------ | ------------------ | ---------------------- |
-   | index   | get    | entity             | 访问数据列表           |
-   | show    | get    | entity/{entity_id} | 获取某条记录的详细信息 |
-   | store   | post   | entity             | 添加，保存一条数据     |
-   | update  | put    | entity/{entity_id} | 更新一条数据           |
-   | destroy | delete | entity/{entity_id} | 删除一条数据           |
+   假设有一组猫的数据接口
+
+   | name    | method | url      | description            |
+   | ------- | ------ | -------- | ---------------------- |
+   | index   | get    | cat      | 访问猫的列表           |
+   | show    | get    | cat/{id} | 获取某一猫的的详细信息 |
+   | store   | post   | cat      | 添加，保存一条猫的数据 |
+   | update  | put    | cat/{id} | 更新某条猫的数据       |
+   | destroy | delete | cat/{id} | 删除某条猫的数据       |
 
 2. post 数据格式
 
-   | 类型       | Content-Type                      | 数据示例                 | description                      |
-   | ---------- | --------------------------------- | ------------------------ | -------------------------------- |
-   | urlencoded | application/x-www-form-urlencoded | name=abc&age=23          | 跟get参数类似,适合简单的表格类型 |
-   | formdata   | multipart/form-data               |                          | 可以上传文件                     |
-   | json       | application/json                  | {"name": "abc","age":23} | 适合多种场合                     |
-
-   
+   | 类型       | Content-Type                      | 数据示例                 | description  |
+   | ---------- | --------------------------------- | ------------------------ | ------------ |
+   | urlencoded | application/x-www-form-urlencoded | name=abc&age=23          | 简单数据     |
+   | formdata   | multipart/form-data               |                          | 可以上传文件 |
+   | json       | application/json                  | {"name": "abc","age":23} | 复杂数据     |
 
    
 
