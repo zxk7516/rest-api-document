@@ -1,18 +1,16 @@
+### URL pattern
 
-
-### URL
-
-| name    | method | url                | description            |
-| ------- | ------ | ------------------ | ---------------------- |
-| index   | get    | entity             | 访问数据列表           |
-| show    | get    | entity/{entity_id} | 获取某条记录的详细信息 |
-| store   | post   | entity             | 添加，保存一条数据     |
-| update  | put    | entity/{entity_id} | 更新一条数据           |
-| destroy | delete | entity/{entity_id} | 删除一条数据           |
+ | name    | method | url                | description            |
+ | ------- | ------ | ------------------ | ---------------------- |
+ | index   | get    | entity             | 访问数据列表           |
+ | show    | get    | entity/{entity_id} | 获取某条记录的详细信息 |
+ | store   | post   | entity             | 添加，保存一条数据     |
+ | update  | put    | entity/{entity_id} | 更新一条数据           |
+ | destroy | delete | entity/{entity_id} | 删除一条数据           |
 
 
 
-###权限和登录
+### 权限和登录
 
 1. 登录
 
